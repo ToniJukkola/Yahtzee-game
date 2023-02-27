@@ -30,6 +30,7 @@ export default StyleSheet.create({
     borderWidth: 1,
     borderRadius: 5,
     paddingHorizontal: 10,
+    fontSize: 20,
     marginBottom: 10
   },
   author: {
