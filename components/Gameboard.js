@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, Pressable } from 'react-native';
+import { Text, View, Pressable, TextInput, Keyboard } from 'react-native';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import styles from '../style/style';
 
@@ -11,6 +11,7 @@ export default function Gameboard() {
 
   const [nbrOfThrowsLeft, setNbrOfThrowsLeft] = useState(NBR_OF_THROWS);
   const [status, setStatus] = useState('');
+  const [playerName, setPlayerName] = useState('');
   const [selectedDices, setSelectedDices] = 
     useState(new Array(NBR_OF_DICES).fill(false));
 
@@ -81,18 +82,33 @@ export default function Gameboard() {
     }
     setNbrOfThrowsLeft(nbrOfThrowsLeft-1);
   }
+
+  function handleNameInput(text) {
+    setPlayerName(text);
+  }
   
   return(
     <View style={styles.gameboard}>
+       <TextInput
+        style={styles.input}
+        placeholder="Enter your name"
+        onChangeText={text => handleNameInput(text)}
+        onSubmitEditing={() => Keyboard.dismiss()}
+        value={playerName}
+        keyboardType='ascii-capable'
+        returnKeyType='done'
+        blurOnSubmit={true}
+        />
       <View style={styles.flex}>{row}</View>
       <Text style={styles.gameinfo}>Throws left: {nbrOfThrowsLeft}</Text>
       <Text style={styles.gameinfo}>{status}</Text>
       <Pressable style={styles.button}
         onPress={() => throwDices()}>
           <Text style={styles.buttonText}>
-            Throw dices
+            Throw dices, {playerName}
           </Text>
       </Pressable>
+      <Text style={styles.gameinfo}>Player: {playerName}</Text>
     </View>
   )
 }

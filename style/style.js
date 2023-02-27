@@ -24,6 +24,14 @@ export default StyleSheet.create({
     textAlign: 'center',
     margin: 10,
   },
+  input: {
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1,
+    borderRadius: 5,
+    paddingHorizontal: 10,
+    marginBottom: 10
+  },
   author: {
     color: '#fff',
     fontWeight: 'bold',
