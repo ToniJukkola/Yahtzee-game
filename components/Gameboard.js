@@ -105,7 +105,7 @@ export default function Gameboard() {
       <Pressable style={styles.button}
         onPress={() => throwDices()}>
           <Text style={styles.buttonText}>
-            Throw dices, {playerName}
+            Throw dices
           </Text>
       </Pressable>
       <Text style={styles.gameinfo}>Player: {playerName}</Text>
