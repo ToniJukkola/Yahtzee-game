@@ -68,6 +68,9 @@ export default function Gameboard() {
       setStatus('Game over');
       setSelectedDices(new Array(NBR_OF_DICES).fill(false));
     }
+
+
+
     else {
       setStatus('Keep on throwing');
     }

@@ -8,12 +8,12 @@ export default StyleSheet.create({
   header: {
     marginTop: 30,
     marginBottom: 15,
-    backgroundColor: 'skyblue',
+    backgroundColor: 'gray',
     flexDirection: 'row',
   },
   footer: {
     marginTop: 20,
-    backgroundColor: 'skyblue',
+    backgroundColor: 'gray',
     flexDirection: 'row'
   },
   title: {
@@ -28,7 +28,7 @@ export default StyleSheet.create({
     height: 40,
     borderColor: 'gray',
     borderWidth: 1,
-    borderRadius: 5,
+    borderRadius: 25,
     paddingHorizontal: 10,
     fontSize: 20,
     marginBottom: 10
@@ -64,14 +64,14 @@ export default StyleSheet.create({
     margin: 30,
     flexDirection: "row",
     padding: 10,
-    backgroundColor: "#73CED6",
+    backgroundColor: "steelblue",
     width: 150,
-    borderRadius: 15,
+    borderRadius: 25,
     justifyContent: 'center',
     alignItems: 'center'
   },
   buttonText: {
-    color:"#2B2B52",
+    color: "white",
     fontSize: 20
   }
 });
